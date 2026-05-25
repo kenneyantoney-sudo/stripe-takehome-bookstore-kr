@@ -1,0 +1,39 @@
+<main>
+  {{#if paymentIntentId}}
+    {{#if isSuccess}}
+      <div class="mt-40 text-center text-success">
+        <h1>
+          <i class="far fa-check-circle"></i>
+          Success!
+        </h1>
+      </div>
+      <div class="mt-40 text-center">
+        <p>Total charged: <strong>$<span class="amount" data-amount="{{amount}}"></span></strong></p>
+        <p class="text-muted mt-20">Payment Intent ID:</p>
+        <p><code>{{paymentIntentId}}</code></p>
+        <p class="text-muted mt-20">Status: <code>{{status}}</code></p>
+        <p class="mt-40"><a href="/" class="btn btn-outline-primary">Back to shop</a></p>
+      </div>
+    {{else}}
+      <div class="mt-40 text-center text-warning">
+        <h1>
+          <i class="far fa-clock"></i>
+          Payment Not Completed
+        </h1>
+      </div>
+      <div class="mt-40 text-center">
+        <p>This payment is not in a completed state.</p>
+        <p class="text-muted mt-20">Current status: <code>{{status}}</code></p>
+        <p class="text-muted mt-20">Payment Intent ID:</p>
+        <p><code>{{paymentIntentId}}</code></p>
+        <p class="mt-40"><a href="/" class="btn btn-primary">Back to shop</a></p>
+      </div>
+    {{/if}}
+  {{else}}
+    <div class="mt-40 text-center">
+      <h1 class="text-secondary">No payment to display</h1>
+      <p class="text-muted mt-20">It looks like you reached this page without completing a purchase.</p>
+      <p class="mt-40"><a href="/" class="btn btn-primary">Back to shop</a></p>
+    </div>
+  {{/if}}
+</main>

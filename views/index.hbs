@@ -1,0 +1,27 @@
+<div class="text-center mt-40">
+  <h1>
+    Stripe Press Shop
+  </h1>
+  <p class="text-secondary">
+    Select an item to purchase
+  </p>
+</div>
+<div class="mt-40 row">
+  {{!-- Render the storefront from the server-side catalog so the displayed
+        titles and prices stay aligned with the charging logic. --}}
+  {{#each books}}
+    <div class="col">
+      <div class="card box-shadow">
+        <img src="{{image}}" class="card-img-top" alt="{{imageAlt}}">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <strong>{{author}}</strong>
+          <p class="card-text mt-20">
+            {{description}}
+          </p>
+          <a href="/checkout?item={{id}}" class="btn btn-primary btn-block">Purchase - $<span class="amount" data-amount="{{amount}}"></span></a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

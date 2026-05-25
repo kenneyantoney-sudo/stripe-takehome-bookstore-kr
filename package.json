@@ -1,0 +1,18 @@
+
+{
+  "name": "sa-takehome-project-node",
+  "version": "1.0.0",
+  "description": "SA Takehome Project",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Matt Mitchell (original boilerplate), Kenny Rajan (Stripe integration and project updates)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.13.3",
+    "express-handlebars": "^5.2.1",
+    "path": "^0.12.7",
+    "stripe": "^8.137.0"
+  }
+}
