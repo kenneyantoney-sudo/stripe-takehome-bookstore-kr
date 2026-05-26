@@ -17,7 +17,7 @@ The application allows a user to select a book, complete payment using Stripe El
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/kenneyantoney-sudo/stripe-takehome-bookstore-kr.git
+git clone https://github.com/kenneyantoney-sudo/stripe-takehome-bookstore-kr.git stripe-takehome-bookstore
 cd stripe-takehome-bookstore
 ```
 
