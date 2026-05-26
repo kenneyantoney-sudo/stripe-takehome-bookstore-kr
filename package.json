@@ -2,7 +2,7 @@
 {
   "name": "sa-takehome-project-node",
   "version": "1.0.0",
-  "description": "SA Takehome Project",
+  "description": "Stripe Press Bookstore Demo",
   "scripts": {
     "start": "node app.js"
   },
