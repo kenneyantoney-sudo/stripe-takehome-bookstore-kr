@@ -189,6 +189,7 @@ If I were building this beyond a demo, especially in an AWS-oriented environment
 2. Add production-grade event handling for fulfillment.
    - In a typical Stripe integration, webhook-driven fulfillment is the standard pattern because payment results are asynchronous.
    - The browser redirect is useful for customer UX, but it is not reliable enough to drive fulfillment on its own because the customer can close the tab, lose connectivity, or return before downstream systems are updated.
+   - In an AWS production architecture, I would make downstream fulfillment handlers idempotent and add retry/backoff behavior to handle transient failures and rate limits safely.
    - Docs: https://docs.stripe.com/webhooks?lang=node
 
 3. In AWS, use Stripe's Amazon EventBridge destination for event ingestion.
